@@ -14,27 +14,36 @@ const Index = () => {
       <Header />
       
       <section className="relative overflow-hidden bg-gradient-to-br from-primary via-secondary to-accent py-24 text-white">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=1600&h=900&fit=crop')] bg-cover bg-center opacity-10"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1491933382434-500287f9b54b?w=1600&h=900&fit=crop')] bg-cover bg-center opacity-20"></div>
         <div className="container relative mx-auto px-4">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="mb-6 text-5xl font-bold md:text-6xl animate-fade-in">
-              Добро пожаловать в TrendShop
-            </h1>
-            <p className="mb-8 text-xl text-white/90 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              Современный магазин с яркими трендами и выгодными предложениями
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <Button size="lg" variant="secondary" asChild>
-                <Link to="/catalog">
-                  <Icon name="ShoppingBag" className="mr-2 h-5 w-5" />
-                  Каталог товаров
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" className="bg-white/10 border-white hover:bg-white/20" asChild>
-                <Link to="/about">
-                  Узнать больше
-                </Link>
-              </Button>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <h1 className="mb-6 text-5xl font-bold md:text-6xl animate-fade-in">
+                Добро пожаловать в TrendShop
+              </h1>
+              <p className="mb-8 text-xl text-white/90 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+                Современный магазин с яркими трендами и выгодными предложениями
+              </p>
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                <Button size="lg" variant="secondary" asChild>
+                  <Link to="/catalog">
+                    <Icon name="ShoppingBag" className="mr-2 h-5 w-5" />
+                    Каталог товаров
+                  </Link>
+                </Button>
+                <Button size="lg" variant="outline" className="bg-white/10 border-white hover:bg-white/20" asChild>
+                  <Link to="/about">
+                    Узнать больше
+                  </Link>
+                </Button>
+              </div>
+            </div>
+            <div className="hidden lg:block animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <img
+                src="https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&h=600&fit=crop"
+                alt="Электроника"
+                className="rounded-3xl shadow-2xl border-4 border-white/20 transform hover:scale-105 transition-transform duration-300"
+              />
             </div>
           </div>
         </div>
